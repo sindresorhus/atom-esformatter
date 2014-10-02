@@ -1,6 +1,5 @@
 'use strict';
 var esformatter = require('esformatter');
-var plugin = module.exports;
 
 function init(editor, onSave) {
 	if (!editor) {
@@ -30,11 +29,14 @@ function init(editor, onSave) {
 	editor.setCursorBufferPosition(cursorPosition);
 }
 
-plugin.configDefaults = {
-	formatOnSave: false
+exports.config = {
+	formatOnSave: {
+		type: 'boolean',
+		default: false
+	}
 };
 
-plugin.activate = function () {
+exports.activate = function () {
 	atom.workspace.eachEditor(function (editor) {
 		editor.getBuffer().on('will-be-saved', function () {
 			var isJS = editor.getGrammar().scopeName === 'source.js';
