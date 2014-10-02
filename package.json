@@ -1,0 +1,23 @@
+{
+  "name": "esformatter",
+  "version": "0.0.0",
+  "description": "Beautify JavaScript",
+  "license": "MIT",
+  "repository": "sindresorhus/atom-esformatter",
+  "private": true,
+  "activationEvents": [
+    "core:save",
+    "esformatter"
+  ],
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "http://sindresorhus.com"
+  },
+  "engines": {
+    "atom": ">=0.120.0"
+  },
+  "dependencies": {
+    "esformatter": "^0.4.2"
+  }
+}
