@@ -24,6 +24,8 @@ Open the Command Palette, and type `esformatter`.
 
 Can also be run on just a selection. For example the code in a `<script>` tag.
 
+There's a `Format On Save` option in the Settings.
+
 
 ## [Config](https://github.com/millermedeiros/esformatter#configuration)
 
