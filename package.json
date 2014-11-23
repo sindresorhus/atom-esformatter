@@ -18,6 +18,14 @@
     "atom": ">=0.135.0"
   },
   "dependencies": {
-    "esformatter": "^0.4.2"
+    "esformatter": "^0.4.2",
+    "esformatter-braces": "^1.0.0",
+    "esformatter-dot-notation": "^1.1.0",
+    "esformatter-literal-notation": "^1.0.0",
+    "esformatter-parseint": "^1.0.1",
+    "esformatter-quotes": "^1.0.0",
+    "esformatter-semicolons": "^1.0.3",
+    "esformatter-var-each": "^1.0.0",
+    "rocambole-commafirst": "^0.1.2"
   }
 }
