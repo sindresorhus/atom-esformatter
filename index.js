@@ -26,10 +26,11 @@ function init(editor, onSave) {
 		editor.setText(retText);
 	}
 
-	if(editor.getScreenLineCount() < line){
+	if (editor.getScreenLineCount() < line){
 		return;
 	}
-	editor.scrollToScreenPosition([line + 2,0]);
+	
+	editor.scrollToScreenPosition([line + 2, 0]);
 }
 
 exports.config = {
