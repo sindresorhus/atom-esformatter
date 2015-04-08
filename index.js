@@ -29,11 +29,9 @@ function init(editor, onSave) {
 
 	editor.setCursorBufferPosition(cursorPosition);
 
-	if (editor.getScreenLineCount() < line){
-		return;
+	if (editor.getScreenLineCount() >= line) {
+		editor.scrollToScreenPosition([line + 2, 0]);
 	}
-	
-	editor.scrollToScreenPosition([line + 2, 0]);
 }
 
 exports.config = {
