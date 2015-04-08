@@ -19,6 +19,7 @@ function init(editor, onSave) {
 	}
 
 	var cursorPosition = editor.getCursorBufferPosition();
+	var line = editor.getFirstVisibleScreenRow();
 
 	if (selectedText) {
 		editor.setTextInBufferRange(editor.getSelectedBufferRange(), retText);
@@ -27,6 +28,12 @@ function init(editor, onSave) {
 	}
 
 	editor.setCursorBufferPosition(cursorPosition);
+
+	if (editor.getScreenLineCount() < line){
+		return;
+	}
+	
+	editor.scrollToScreenPosition([line + 2, 0]);
 }
 
 exports.config = {
