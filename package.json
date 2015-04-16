@@ -1,6 +1,6 @@
 {
   "name": "esformatter",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "Beautify JavaScript",
   "license": "MIT",
   "repository": "sindresorhus/atom-esformatter",
