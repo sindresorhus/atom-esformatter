@@ -17,6 +17,13 @@
   "engines": {
     "atom": ">=0.190.0"
   },
+  "keywords": [
+    "javascript",
+    "format",
+    "beautify",
+    "prettify",
+    "style"
+  ],
   "dependencies": {
     "esformatter": "^0.6.1",
     "esformatter-braces": "^1.0.0",
