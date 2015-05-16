@@ -25,7 +25,7 @@
     "style"
   ],
   "dependencies": {
-    "esformatter": "^0.6.1",
+    "esformatter": "^0.7.0",
     "esformatter-braces": "^1.0.0",
     "esformatter-dot-notation": "^1.1.0",
     "esformatter-literal-notation": "^1.0.0",
