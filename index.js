@@ -18,8 +18,9 @@ function init(editor, onSave) {
 		return;
 	}
 
+	var editorEl = atom.views.getView(editor);
 	var cursorPosition = editor.getCursorBufferPosition();
-	var line = editor.getFirstVisibleScreenRow() + editor.displayBuffer.getVerticalScrollMargin();
+	var line = editorEl.getFirstVisibleScreenRow() + editor.displayBuffer.getVerticalScrollMargin();
 
 	if (selectedText) {
 		editor.setTextInBufferRange(editor.getSelectedBufferRange(), retText);
