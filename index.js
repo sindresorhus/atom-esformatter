@@ -53,7 +53,7 @@ exports.activate = function () {
 		});
 	});
 
-	atom.commands.add('atom-text-editor', 'esformatter', function () {
+	atom.commands.add('atom-workspace', 'esformatter', function () {
 		init(atom.workspace.getActiveTextEditor());
 	});
 };

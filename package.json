@@ -6,8 +6,10 @@
   "repository": "sindresorhus/atom-esformatter",
   "private": true,
   "activationCommands": {
-    "atom-workspace": "core:save",
-    "atom-text-editor": "esformatter"
+    "atom-workspace": [
+      "core:save",
+      "esformatter"
+    ]
   },
   "author": {
     "name": "Sindre Sorhus",
