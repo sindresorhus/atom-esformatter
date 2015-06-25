@@ -29,6 +29,7 @@
   "dependencies": {
     "esformatter": "^0.7.0",
     "esformatter-braces": "^1.0.0",
+    "esformatter-collapse-objects": "^0.4.1",
     "esformatter-dot-notation": "^1.1.0",
     "esformatter-literal-notation": "^1.0.0",
     "esformatter-parseint": "^1.0.1",
