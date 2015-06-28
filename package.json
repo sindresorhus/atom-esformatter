@@ -17,7 +17,7 @@
     "url": "sindresorhus.com"
   },
   "engines": {
-    "atom": ">=0.190.0"
+    "atom": ">=1.0.0"
   },
   "keywords": [
     "javascript",
@@ -36,6 +36,6 @@
     "esformatter-parseint": "^1.0.1",
     "esformatter-quotes": "^1.0.0",
     "esformatter-semicolons": "^1.0.3",
-    "esformatter-var-each": "^1.0.0"
+    "esformatter-var-each": "^2.0.1"
   }
 }
