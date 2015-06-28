@@ -1,14 +1,14 @@
-'use strict';
-var esformatter = require('esformatter');
+'use babel';
+import esformatter from 'esformatter';
 
 function init(editor, onSave) {
 	if (!editor) {
 		return;
 	}
 
-	var selectedText = onSave ? null : editor.getSelectedText();
-	var text = selectedText || editor.getText();
-	var retText = '';
+	const selectedText = onSave ? null : editor.getSelectedText();
+	const text = selectedText || editor.getText();
+	let retText = '';
 
 	try {
 		retText = esformatter.format(text, esformatter.rc(editor.getURI()));
@@ -18,9 +18,9 @@ function init(editor, onSave) {
 		return;
 	}
 
-	var editorEl = atom.views.getView(editor);
-	var cursorPosition = editor.getCursorBufferPosition();
-	var line = editorEl.getFirstVisibleScreenRow() + editor.displayBuffer.getVerticalScrollMargin();
+	const editorEl = atom.views.getView(editor);
+	const cursorPosition = editor.getCursorBufferPosition();
+	const line = editorEl.getFirstVisibleScreenRow() + editor.displayBuffer.getVerticalScrollMargin();
 
 	if (selectedText) {
 		editor.setTextInBufferRange(editor.getSelectedBufferRange(), retText);
@@ -35,17 +35,17 @@ function init(editor, onSave) {
 	}
 }
 
-exports.config = {
+export let config = {
 	formatOnSave: {
 		type: 'boolean',
 		default: false
 	}
 };
 
-exports.activate = function () {
-	atom.workspace.observeTextEditors(function (editor) {
-		editor.getBuffer().onWillSave(function () {
-			var isJS = editor.getGrammar().scopeName === 'source.js';
+export let activate = () => {
+	atom.workspace.observeTextEditors(editor => {
+		editor.getBuffer().onWillSave(() => {
+			const isJS = editor.getGrammar().scopeName === 'source.js';
 
 			if (isJS && atom.config.get('esformatter.formatOnSave')) {
 				init(editor, true);
@@ -53,7 +53,7 @@ exports.activate = function () {
 		});
 	});
 
-	atom.commands.add('atom-workspace', 'esformatter', function () {
+	atom.commands.add('atom-workspace', 'esformatter', () => {
 		init(atom.workspace.getActiveTextEditor());
 	});
 };
