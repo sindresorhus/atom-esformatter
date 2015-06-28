@@ -11,11 +11,11 @@
 
 ## Install
 
-```sh
+```
 $ apm install esformatter
 ```
 
-Or Settings → Packages → Search for `esformatter`
+Or Settings → Install → Search for `esformatter`
 
 
 ## Usage
