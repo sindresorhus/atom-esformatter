@@ -1,7 +1,5 @@
 # esformatter
 
-[Atom package](https://atom.io/packages/esformatter)
-
 > Beautify JavaScript using [esformatter](https://github.com/millermedeiros/esformatter)
 
 <img src="https://cloud.githubusercontent.com/assets/170270/4490970/2333d93a-4a33-11e4-9954-dffea0c5f528.gif" width="311">
