@@ -1,6 +1,12 @@
 'use babel';
 import esformatter from 'esformatter';
 
+const SUPPORTED_SCOPES = [
+	'source.js',
+	'source.jsx',
+	'source.js.jsx'
+];
+
 function init(editor, onSave) {
 	if (!editor) {
 		return;
@@ -45,7 +51,7 @@ export let config = {
 export let activate = () => {
 	atom.workspace.observeTextEditors(editor => {
 		editor.getBuffer().onWillSave(() => {
-			const isJS = editor.getGrammar().scopeName === 'source.js';
+			const isJS = SUPPORTED_SCOPES.indexOf(editor.getGrammar().scopeName) !== -1;
 
 			if (isJS && atom.config.get('esformatter.formatOnSave')) {
 				init(editor, true);
