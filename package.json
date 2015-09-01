@@ -34,6 +34,7 @@
     "esformatter-jsx": "^2.0.10",
     "esformatter-literal-notation": "^1.0.0",
     "esformatter-parseint": "^1.0.1",
+    "esformatter-quote-props": "^1.0.2",
     "esformatter-quotes": "^1.0.0",
     "esformatter-semicolons": "^1.0.3",
     "esformatter-var-each": "^2.0.1",
