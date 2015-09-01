@@ -37,6 +37,7 @@
     "esformatter-quote-props": "^1.0.2",
     "esformatter-quotes": "^1.0.0",
     "esformatter-semicolons": "^1.0.3",
+    "esformatter-spaced-lined-comment": "^2.0.1",
     "esformatter-var-each": "^2.0.1",
     "esformatter-wordpress": "^0.2.0"
   }
