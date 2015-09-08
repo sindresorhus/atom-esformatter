@@ -13,21 +13,21 @@
 $ apm install esformatter
 ```
 
-Or Settings → Install → Search for `esformatter`
+Or, Settings → Install → Search for `esformatter`
 
 
 ## Usage
 
-Open the Command Palette, and type `esformatter`.
+Open the Command Palette and type `esformatter`.
 
 Can also be run on just a selection. For example the code in a `<script>` tag.
 
-There's a `Format On Save` option in the Settings.
+There's a `Format On Save` option in the settings.
 
 
 ## [Config](https://github.com/millermedeiros/esformatter#configuration)
 
-Some [plugins](https://github.com/sindresorhus/atom-esformatter/blob/7ff87d550b880d14840bbee6d6c4cbfbb1b57016/package.json#L22-L28) are bundled. *PR welcome for more.*
+Some [plugins](https://github.com/sindresorhus/atom-esformatter/blob/c5d0d550d94dd8c8caec4b7a5c0a72722d432e4d/package.json#L31-L43) are bundled. *PR welcome for more.*
 
 Just add the ones you want to your config file:
 

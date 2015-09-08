@@ -5,16 +5,16 @@
   "license": "MIT",
   "repository": "sindresorhus/atom-esformatter",
   "private": true,
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com"
+  },
   "activationCommands": {
     "atom-workspace": [
       "core:save",
       "esformatter"
     ]
-  },
-  "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
   },
   "engines": {
     "atom": ">=1.0.0"

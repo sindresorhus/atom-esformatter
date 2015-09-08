@@ -1,4 +1,4 @@
-'use babel';
+/** @babel */
 import esformatter from 'esformatter';
 
 const SUPPORTED_SCOPES = [
