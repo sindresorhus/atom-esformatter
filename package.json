@@ -19,6 +19,9 @@
   "engines": {
     "atom": ">=1.0.0"
   },
+  "scripts": {
+    "test": "xo"
+  },
   "keywords": [
     "javascript",
     "format",
@@ -41,5 +44,17 @@
     "esformatter-spaced-lined-comment": "^2.0.1",
     "esformatter-var-each": "^2.0.1",
     "esformatter-wordpress": "^0.2.0"
+  },
+  "devDependencies": {
+    "xo": "*"
+  },
+  "xo": {
+    "esnext": true,
+    "globals": [
+      "atom"
+    ],
+    "ignores": [
+      "fixture.*"
+    ]
   }
 }
