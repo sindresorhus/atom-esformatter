@@ -33,7 +33,7 @@
     "esformatter": "^0.7.0",
     "esformatter-add-trailing-commas": "^1.1.0",
     "esformatter-braces": "^1.0.0",
-    "esformatter-collapse-objects": "^0.4.1",
+    "esformatter-collapse-objects": "^0.5.1",
     "esformatter-dot-notation": "^1.1.0",
     "esformatter-eol-last": "^1.0.0",
     "esformatter-jquery-chain": "^1.1.0",
