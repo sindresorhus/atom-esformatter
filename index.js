@@ -20,7 +20,7 @@ function init(editor, onSave) {
 		retText = esformatter.format(text, esformatter.rc(editor.getURI()));
 	} catch (err) {
 		console.error(err);
-		atom.beep();
+		atom.notifications.addError('esformatter', {detail: err.message});
 		return;
 	}
 
