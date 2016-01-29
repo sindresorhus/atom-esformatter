@@ -36,6 +36,7 @@
     "esformatter-collapse-objects": "^0.5.1",
     "esformatter-dot-notation": "^1.1.0",
     "esformatter-eol-last": "^1.0.0",
+    "esformatter-flow": "^1.0.1",
     "esformatter-ignore": "^0.1.3",
     "esformatter-jquery-chain": "^1.1.0",
     "esformatter-jsx": "^4.0.6",
