@@ -53,6 +53,7 @@
     "esformatter-wordpress": "^0.2.0"
   },
   "devDependencies": {
+    "esformatter-limit-linebreaks": "0.0.3",
     "xo": "*"
   },
   "xo": {
