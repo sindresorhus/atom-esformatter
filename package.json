@@ -41,6 +41,7 @@
     "esformatter-ignore": "^0.1.3",
     "esformatter-jquery-chain": "^1.1.0",
     "esformatter-jsx": "^4.0.6",
+    "esformatter-limit-linebreaks": "0.0.3",
     "esformatter-literal-notation": "^1.0.0",
     "esformatter-parseint": "^1.0.1",
     "esformatter-quote-props": "^1.0.2",
