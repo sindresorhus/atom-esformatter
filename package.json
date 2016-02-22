@@ -30,7 +30,7 @@
     "style"
   ],
   "dependencies": {
-    "esformatter": "^0.9.0",
+    "esformatter": "^0.9.1",
     "esformatter-add-trailing-commas": "^1.1.0",
     "esformatter-align": "^0.1.0",
     "esformatter-braces": "^1.0.0",
