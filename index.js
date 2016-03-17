@@ -7,13 +7,13 @@ const SUPPORTED_SCOPES = [
 ];
 
 function esformatterModulePath(editor) {
-	let path = require('path');
-	let fs = require('fs');
+	const path = require('path');
+	const fs = require('fs');
 
 	const editorPath = editor.getPath();
 	const projectPath = atom.project.relativizePath(editorPath)[0];
 
-	if (projectPath != null) {
+	if (projectPath !== null) {
 		try {
 			const esformatterPath = path.join(projectPath, "node_modules/esformatter");
 			fs.accessSync(esformatterPath);
@@ -32,7 +32,7 @@ function init(editor, onSave) {
 		return;
 	}
 
-	let esformatter = require(esformatterModulePath(editor));
+	const esformatter = require(esformatterModulePath(editor));
 
 	const selectedText = onSave ? null : editor.getSelectedText();
 	const text = selectedText || editor.getText();
