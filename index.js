@@ -1,5 +1,4 @@
 /** @babel */
-import esformatter from 'esformatter';
 
 const SUPPORTED_SCOPES = [
 	'source.js',
@@ -7,10 +6,33 @@ const SUPPORTED_SCOPES = [
 	'source.js.jsx'
 ];
 
+function esformatterModulePath(editor) {
+	const path = require('path');
+	const fs = require('fs');
+
+	const editorPath = editor.getPath();
+	const projectPath = atom.project.relativizePath(editorPath)[0];
+
+	if (projectPath !== null) {
+		try {
+			const esformatterPath = path.join(projectPath, "node_modules/esformatter");
+			fs.accessSync(esformatterPath);
+			return esformatterPath;
+		} catch (err) {
+			console.error(err);
+		}
+	}
+
+	console.log('Could not find esformatter module in the project. Falling back to internal esformatter shipped with package.');
+	return 'esformatter';
+}
+
 function init(editor, onSave) {
 	if (!editor) {
 		return;
 	}
+
+	const esformatter = require(esformatterModulePath(editor));
 
 	const selectedText = onSave ? null : editor.getSelectedText();
 	const text = selectedText || editor.getText();
