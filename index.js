@@ -14,6 +14,7 @@ function init(editor, onSave) {
 
 	const selectedText = onSave ? null : editor.getSelectedText();
 	const text = selectedText || editor.getText();
+
 	let retText = '';
 
 	try {
@@ -51,7 +52,7 @@ export const config = {
 export const activate = () => {
 	atom.workspace.observeTextEditors(editor => {
 		editor.getBuffer().onWillSave(() => {
-			const isJS = SUPPORTED_SCOPES.indexOf(editor.getGrammar().scopeName) !== -1;
+			const isJS = SUPPORTED_SCOPES.includes(editor.getGrammar().scopeName);
 
 			if (isJS && atom.config.get('esformatter.formatOnSave')) {
 				init(editor, true);

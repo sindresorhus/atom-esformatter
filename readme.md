@@ -42,4 +42,4 @@ Just add the ones you want to your config file:
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)
