@@ -1,5 +1,6 @@
 /** @babel */
-import esformatter from 'esformatter';
+import path from 'path';
+import {silent as reqFrom} from 'req-from';
 
 const SUPPORTED_SCOPES = [
 	'source.js',
@@ -12,13 +13,16 @@ function init(editor, onSave) {
 		return;
 	}
 
+	const fp = editor.getPath();
+	const esformatter = reqFrom(path.dirname(fp), 'esformatter') || require('esformatter');
+
 	const selectedText = onSave ? null : editor.getSelectedText();
 	const text = selectedText || editor.getText();
 
 	let retText = '';
 
 	try {
-		retText = esformatter.format(text, esformatter.rc(editor.getURI()));
+		retText = esformatter.format(text, esformatter.rc(fp));
 	} catch (err) {
 		console.error(err);
 		atom.notifications.addError('esformatter', {detail: err.message});

@@ -53,7 +53,8 @@
     "esformatter-spaced-lined-comment": "^2.0.1",
     "esformatter-use-strict": "^2.0.2",
     "esformatter-var-each": "^2.0.1",
-    "esformatter-wordpress": "^0.2.0"
+    "esformatter-wordpress": "^0.2.0",
+    "req-from": "^1.0.1"
   },
   "devDependencies": {
     "xo": "*"

@@ -25,11 +25,14 @@ Can also be run on just a selection. For example the code in a `<script>` tag.
 There's a `Format On Save` option in the settings.
 
 
-## [Config](https://github.com/millermedeiros/esformatter#configuration)
+## Info
 
-Some [plugins](https://github.com/sindresorhus/atom-esformatter/blob/master/package.json) are bundled. *PR welcome for more.*
+This plugin will first try to import the `esformatter` dependency in your project. If one can't be found, it will fall back to the bundled one with the following [plugins](package.json) *(PR welcome for more)*.
 
-Just add the ones you want to your config file:
+
+## Config
+
+Add the plugins you want to your [config file](https://github.com/millermedeiros/esformatter#configuration):
 
 ```json
 {
