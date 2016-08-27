@@ -43,6 +43,16 @@ Add the plugins you want to your [config file](https://github.com/millermedeiros
 ```
 
 
+## Keyboard shortcut
+
+Set the keyboard shortcut you want in your [keymap](http://flight-manual.atom.io/using-atom/sections/basic-customization/#customizing-keybindings):
+
+```cson
+'atom-text-editor':
+	'cmd-shift-x': 'esformatter'
+```
+
+
 ## License
 
 MIT © [Sindre Sorhus](https://sindresorhus.com)
