@@ -31,9 +31,9 @@ function init(editor, onSave) {
 		return;
 	}
 
-	const editorEl = atom.views.getView(editor);
 	const cursorPosition = editor.getCursorBufferPosition();
-	const line = editorEl.getFirstVisibleScreenRow() + editor.displayBuffer.getVerticalScrollMargin();
+	const line = atom.views.getView(editor).getFirstVisibleScreenRow() +
+		editor.displayBuffer.getVerticalScrollMargin();
 
 	if (selectedText) {
 		editor.setTextInBufferRange(editor.getSelectedBufferRange(), retText);
@@ -59,7 +59,7 @@ export function deactivate() {
 	this.subscriptions.dispose();
 }
 
-export const activate = () => {
+export function activate() {
 	this.subscriptions = new CompositeDisposable();
 
 	this.subscriptions.add(atom.workspace.observeTextEditors(editor => {
@@ -79,4 +79,4 @@ export const activate = () => {
 			init(editor);
 		}
 	}));
-};
+}
