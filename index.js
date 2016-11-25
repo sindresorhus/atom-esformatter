@@ -36,7 +36,7 @@ function init(editor, onSave) {
 	if (selectedText) {
 		editor.setTextInBufferRange(editor.getSelectedBufferRange(), retText);
 	} else {
-		editor.setText(retText);
+		editor.getBuffer().setTextViaDiff(retText);
 	}
 
 	editor.setCursorBufferPosition(cursorPosition);
