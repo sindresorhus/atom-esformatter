@@ -30,9 +30,9 @@
     "style"
   ],
   "dependencies": {
-    "esformatter": "^0.9.0",
+    "esformatter": "^0.10.0",
     "esformatter-add-trailing-commas": "^1.1.0",
-    "esformatter-align": "^0.1.0",
+    "esformatter-align": "^0.2.3",
     "esformatter-asi": "^0.5.2",
     "esformatter-braces": "^1.0.0",
     "esformatter-collapse-objects": "^0.5.1",
@@ -51,9 +51,10 @@
     "esformatter-semicolon-first": "^1.1.0",
     "esformatter-semicolons": "^1.0.3",
     "esformatter-spaced-lined-comment": "^2.0.1",
-    "esformatter-use-strict": "^2.0.2",
+    "esformatter-use-strict": "^3.0.0",
     "esformatter-var-each": "^2.0.1",
     "esformatter-wordpress": "^0.2.0",
+    "loophole": "^1.1.0",
     "req-from": "^1.0.1"
   },
   "devDependencies": {
