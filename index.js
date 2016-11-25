@@ -1,5 +1,6 @@
 /** @babel */
 import path from 'path';
+import {CompositeDisposable} from 'atom';
 import {silent as reqFrom} from 'req-from';
 
 const SUPPORTED_SCOPES = [
@@ -9,10 +10,6 @@ const SUPPORTED_SCOPES = [
 ];
 
 function init(editor, onSave) {
-	if (!editor) {
-		return;
-	}
-
 	const fp = editor.getPath();
 	const esformatter = reqFrom(path.dirname(fp), 'esformatter') || require('esformatter');
 
@@ -53,8 +50,14 @@ export const config = {
 	}
 };
 
+export function deactivate() {
+	this.subscriptions.dispose();
+}
+
 export const activate = () => {
-	atom.workspace.observeTextEditors(editor => {
+	this.subscriptions = new CompositeDisposable();
+
+	this.subscriptions.add(atom.workspace.observeTextEditors(editor => {
 		editor.getBuffer().onWillSave(() => {
 			const isJS = SUPPORTED_SCOPES.includes(editor.getGrammar().scopeName);
 
@@ -62,9 +65,13 @@ export const activate = () => {
 				init(editor, true);
 			}
 		});
-	});
+	}));
 
-	atom.commands.add('atom-workspace', 'esformatter', () => {
-		init(atom.workspace.getActiveTextEditor());
-	});
+	this.subscriptions.add(atom.commands.add('atom-workspace', 'esformatter', () => {
+		const editor = atom.workspace.getActiveTextEditor();
+
+		if (editor) {
+			init(editor);
+		}
+	}));
 };
