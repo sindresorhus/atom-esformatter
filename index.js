@@ -1,7 +1,7 @@
 /** @babel */
 import path from 'path';
 import {CompositeDisposable} from 'atom';
-import {silent as reqFrom} from 'req-from';
+import importFrom from 'import-from';
 import {allowUnsafeNewFunction} from 'loophole';
 
 const SUPPORTED_SCOPES = [
@@ -15,7 +15,7 @@ function init(editor, onSave) {
 
 	let esformatter;
 	allowUnsafeNewFunction(() => {
-		esformatter = reqFrom(path.dirname(fp), 'esformatter') || require('esformatter');
+		esformatter = importFrom.silent(path.dirname(fp), 'esformatter') || require('esformatter');
 	});
 
 	const selectedText = onSave ? null : editor.getSelectedText();

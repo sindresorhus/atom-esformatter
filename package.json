@@ -10,12 +10,6 @@
     "email": "sindresorhus@gmail.com",
     "url": "sindresorhus.com"
   },
-  "activationCommands": {
-    "atom-workspace": [
-      "core:save",
-      "esformatter"
-    ]
-  },
   "engines": {
     "atom": ">=1.13.0"
   },
@@ -41,7 +35,7 @@
     "esformatter-flow": "^1.0.1",
     "esformatter-ignore": "^0.1.3",
     "esformatter-jquery-chain": "^1.1.0",
-    "esformatter-jsx": "^7.0.0",
+    "esformatter-jsx": "^8.0.0",
     "esformatter-limit-linebreaks": "0.0.3",
     "esformatter-literal-notation": "^1.0.0",
     "esformatter-parseint": "^1.0.1",
@@ -54,14 +48,19 @@
     "esformatter-use-strict": "^3.0.0",
     "esformatter-var-each": "^2.0.1",
     "esformatter-wordpress": "^0.2.0",
-    "loophole": "^1.1.0",
-    "req-from": "^1.0.1"
+    "import-from": "^2.1.0",
+    "loophole": "^1.1.0"
   },
   "devDependencies": {
     "xo": "*"
   },
+  "activationCommands": {
+    "atom-workspace": [
+      "core:save",
+      "esformatter"
+    ]
+  },
   "xo": {
-    "esnext": true,
     "globals": [
       "atom"
     ]
