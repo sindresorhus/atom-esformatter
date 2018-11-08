@@ -1,3 +1,9 @@
+# Deprecated
+
+The `esformatter` project is no longer maintained.
+
+---
+
 # esformatter
 
 > Beautify JavaScript using [esformatter](https://github.com/millermedeiros/esformatter)
